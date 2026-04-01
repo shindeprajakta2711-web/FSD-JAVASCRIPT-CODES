@@ -1,0 +1,26 @@
+<html>
+ <head>
+   <title>promise application</title>
+   <script type='text/javascript'>
+     let promise=new Promise(function(resolve,reject){
+		   let a=9,b=3,c;
+		   if(b!=0){
+		     c=a/b;
+			 resolve("Division is "+c);
+		   }
+		   else{
+		     reject("Second value should not zero");
+		   }
+	   });
+	 promise.then(function(str){
+	       document.write(str);
+	  });
+	 promise.catch(function(err){
+	    document.write(err);
+	 });
+   </script>
+ </head>
+ <body>
+ 
+ </body>
+</html>
