@@ -1,36 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <script>
-        function calculator(){
-        let P=document.getElementById("Amount").value;
-        let AR=document.getElementById("AnnualRate").value;
-        let N=document.getElementById("time").value;
-        let R=AR/12/100;
-        let EMi=(P*R*Math.pow(1+R),N)/(Math.pow(1+R,N)-1);
-        let totalPay=EMi*N;
-        let payable=totalPay-P;
-        document.getElementById("getemi").innerHTML="Home Loan Amount:"+EMi.toFixed(2);
-        document.getElementById("interest").innerHTML="Total interest :"+payable.toFixed(2);
-        document.getElementById("Total").innerHTML="Total:"+totalPay.toFixed(2);
-        }
-         </script>
-        <h2>Calculator</h2>
-        <input type="number" id="Amount">
-        <input type="number" id="AnnualRate">
-        <input type="number" id="time">
-        <br>
-        <button onclick="calculator()">Calculate</button>
-            <p id="getemi"></p>
-            <p id="interest"></p>
-            <p id="Total"></p>
-
-
-   
-</body>
+<html>
+ <head>
+   <title>promise application</title>
+   <script type='text/javascript'>
+    
+	function startClock()
+	{  setInterval(function(){
+	   let d=new Date();
+		let time=d.toLocaleTimeString();
+	document.getElementById("h").innerHTML=""+time;
+	},1000);
+	}
+	 
+   </script>
+ </head>
+ <body>
+    <input type="button" name="s" value="Start Digital Clock" 
+	style='width:400px;height:40px'
+	 onclick="startClock()"/>
+	<br/><br/>
+	<h1 id="h"></h1>
+ </body>
 </html>
