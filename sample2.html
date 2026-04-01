@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bank Account (No Input, No Button)</title>
+</head>
+<body>
+
+    <h2>Bank Account System</h2>
+    <h3 id="balanceDisplay"></h3>
+
+    <script>
+        // BankAccount Class
+        class BankAccount {
+            constructor() {
+                this.balance = 0;
+            }
+
+            deposit(amount) {
+                this.balance += amount;
+            }
+
+            withdraw(amount) {
+                // No if-else
+                amount > this.balance 
+                    ? alert("Insufficient balance")
+                    : this.balance -= amount;
+            }
+
+            displayBalance() {
+                return this.balance;
+            }
+        }
+
+        // Create object
+        let account = new BankAccount();
+
+        // Automatic operations
+        account.deposit(1000);   // Deposit ₹1000
+        account.withdraw(300);  // Withdraw ₹300
+
+        // Display result
+        document.getElementById("balanceDisplay").innerText =
+            "Final Balance: ₹" + account.displayBalance();
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sound Example</title>
+</head>
+<body>
+<p id="output"></p>
+<script>
+    class Animal {
+        sound() {
+            return "sound";
+        }
+    }
+    class Dog extends Animal {
+        sound() {
+            return "Bark";
+        }
+    }
+    let dog = new Dog();
+    document.getElementById("output").innerHTML = dog.sound();
+</script>
+
+</body>
+</html>

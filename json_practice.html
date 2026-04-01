@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Application</title>
+    <script>
+        let jsonObj = {
+            "id":101,
+            "Name":"ABC",
+            "Department":"HR"
+        };
+        document.write("<h1>ID is "+jsonObj.id+"</h1>");
+        document.write("<h1>Name is "+jsonObj.Name+"</h1>");
+        document.write("<h1>Department is"+jsonObj.Department+"</h1>");
+
+        let jsonObjTwo = {
+            "ID": 101,
+            "Name":"ABC",
+            "Marks":[60,60,60,60,60,60]
+        };
+        let StudID = jsonObjTwo.ID;
+        let StudName = jsonObjTwo.Name;
+        let StudMarks = jsonObjTwo.Marks;
+        document.write("<h1>Student ID is "+StudID+"</h1>");
+        document.write("<h1>Student Name is "+StudName+"</h1>");
+        document.write("<h1>Student Marks are "+StudMarks+"</h1>");
+        document.write(typeof(StudMarks));
+        for(var i=0; i<StudMarks.length;i++){
+            document.write(StudMarks[i]+"<br>");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

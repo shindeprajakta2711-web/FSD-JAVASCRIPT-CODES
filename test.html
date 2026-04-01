@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function test(){
+            let name=document.getElementById("Name");
+            let college=document.getElementById("college");
+            let english=document.getElementById("eng");
+            let sci=document.getElementById("sci");
+            let sst=document.getElementById("sst");
+            let total=english+sci+sst;
+            let avg=total/3;
+            document.getElementById("total").innerHTML="the total of all marks are:"+total;
+            docment.getElementById("average").innerHTML="the average of marks are:"+avg;
+        }
+    </script>
+    <h2>Enter name and marks</h2><br>
+    <input type="text" id="Name"><br>
+    <input type="text" id="college"><br>
+    <input type="number" id="eng"><br>
+    <input type="number" id="sci"><br>
+    <input type="number" id="sst"><br>
+    <button onclick="test()">result</button>
+<h2>the results are</h2><br>
+<p id="total"></p><br>
+<p id="average"></p><br>
+</body>
+</html>

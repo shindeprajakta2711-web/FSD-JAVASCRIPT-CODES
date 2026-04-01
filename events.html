@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events in javascript</title>
+     <script>
+        function show(){
+            alert("Welcome to this page");
+        }
+        function change(){
+            alert("Welcome to this page");
+        }
+        function blurs(){
+            alert("blur event is executed");
+        }
+        function focusDemo(){
+            alert("Focus event is executed");
+        }
+        function hello(){
+            alert("mouse is hovered over the button");
+        }
+        function world(){
+            alert("cursor left the box");
+        }
+    </script>
+</head>
+<body>
+   <h3>On key press event</h3><br><input type="text" onkeyup="show()">
+    <h3>On change event</h3><br><select onchange="change()">
+        <option>Select branch</option><br>
+        <option>ENTC</option>
+        <option>Mechnical</option>
+        <option>Civil</option><br>
+        </select>
+    <h3>Blur and focus event</h3>
+    <input type="text" onblur="blurs()"><br>
+    <input type="text" onfocus="focusDemo()"><br>
+    <h3>On click event</h3><br>
+    <input type="button" value="click me" onclick="show()">
+    <h3>Keypress event</h3><br>
+    <input type="button" onkeypress="show()"><br>
+    <h3>Mouse over event</h3><br>
+    <input type="button" value="Hover me" onmouseover="hello()"><br>
+    <h3>On mouse leave event</h3><br>
+    <input type="button" value="leave" onmouseleave="world()">
+    <h3>on key press event</h3><br>
+    <input type="text" onkeypress="show()">
+</body>
+</html>

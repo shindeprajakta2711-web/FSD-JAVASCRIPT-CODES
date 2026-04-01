@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Home Loan EMI Calculator</title>
+</head>
+
+<body>
+    <script>
+function calculateEMI(){
+let P = document.getElementById("loan").value;
+let annualRate = document.getElementById("rate").value;
+let N = document.getElementById("time").value;
+let R = annualRate/12/100;
+let EMI = (P*R*Math.pow((1+R),N))/(Math.pow((1+R),N)-1);
+let totalPayment = EMI*N;
+let totalInterest = totalPayment-P;
+document.getElementById("emi").innerHTML="Monthly EMI : ₹ "+EMI.toFixed(2);
+document.getElementById("interest").innerHTML="Total Interest : ₹ "+totalInterest.toFixed(2);
+document.getElementById("total").innerHTML="Total Payment : ₹ "+totalPayment.toFixed(2);
+}
+
+</script>
+<div class="container">
+<h2>Home Loan EMI Calculator</h2>
+<input type="number" id="loan" placeholder="Loan Amounts">
+<input type="number" id="rate" placeholder="Interest Rate (%)">
+<input type="number" id="time" placeholder="Loan Tenure (Months)">
+<br>
+<button onclick="calculateEMI()">Calculate</button>
+<div class="result">
+<p id="emi"></p>
+<p id="interest"></p>
+<p id="total"></p>
+</div>
+</div>
+
+
+</body>
+</html>

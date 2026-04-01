@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Methods in javascript</title>
+</head>
+<body>
+    <script>
+        // Reverse method
+        let num=[10,20,30,40,70];
+        document.write("the original order is:",num,"<br><br>")
+        let b=num.reverse();
+        document.write("the reverse order of num is:",b,"<br><br>");
+
+        //pop method
+        let a=[23,34,45,39,90];
+        let b_one=a.pop();
+        document.write("these is pop method:",b_one,"<br><br>");
+
+        //shift method
+        let arr=["mango","apple","banana","watermelon"];
+        let results=arr.shift();
+        document.write("these is shift method:",results,"<br><br>");
+    
+        //slice method
+        let no=[20,21,22,23,24,25,26];
+        let two=no.slice(1,5);
+        document.write("the slice methods:",two,"<br><br>");
+
+        //splice method
+        let three=no.splice(2,6);
+        document.write("the splice method:",three,"<br><br>");
+
+        // Index Of method
+        let number_one=[31,32,33,43,44,89];
+        let news=number_one.indexOf(44);
+        document.write("the index of 44 is:",news,"<br><br>");
+
+        //last Index Of methods
+        let numbers_two=[50,51,52,50,53,54,55,50];
+        let results_one=numbers_two.lastIndexOf(50);
+        document.write("the last index of 50 is:",results_one,"<br><br>");
+
+        //flat method
+        let news_one=[[80,90],[78,67],[56,43]];
+        let result_one=news_one.flat();
+        document.write("these is flat methdod:",result_one,"<br><br>");
+   
+        // sort method
+        let news_two=[50,54,45,56,90,43,22,90];
+        let result_two=news_two.sort();
+        document.write("these is sorting method:",result_two,"<br><br>");
+    
+        //push methods
+        let name_one=[100,200,300,400,500,600];
+        let name_two=name_one.push(1000);
+        document.write("these is push method:",name_two,"<br><br>");
+    
+        //Concat method
+        let string_one=[20,30,90,80,70];
+        let string_two=string_one.includes(70);
+        document.write("the concatnation method:",string_one,"<br><br>");
+    </script>
+</body>
+</html>
