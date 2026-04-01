@@ -1,24 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Sound Example</title>
-</head>
-<body>
-<p id="output"></p>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise application</title>
 <script>
-    class Animal {
-        sound() {
-            return "sound";
+    let p = new Promise(function(resolve,reject){
+        let s1 = "Good";
+        let s2 = "Goods";
+        if(s1==s2){
+            resolve("Strings are equal");
         }
-    }
-    class Dog extends Animal {
-        sound() {
-            return "Bark";
+        else{
+            reject("strings are not equal");
         }
-    }
-    let dog = new Dog();
-    document.getElementById("output").innerHTML = dog.sound();
+    });
+    p.then(function(str){
+        document.write(str);
+    }).catch(function(str){
+        document.write(str);
+    });
 </script>
+</head>
 
+<body>
+    
 </body>
 </html>
